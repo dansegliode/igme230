@@ -1,29 +1,116 @@
+/* setting the scroll behaivor for the arrow
+and setting the font for the document */
+
 html {
     scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
+
+/* font size is 4x the body size */
+
 h1 {
-    margin-left: 100px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 3rem;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 4rem;
+    font-weight: 100;
 }
 
 h2 {
-    margin-left: 100px;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
 }
 
 .scrollarrow {
     margin-left: 100px;
-
+    margin-bottom: 80px;
+    width: 50px;
 }
+
+
+/* putting the portrait div next to the left div,
+making it the size of the browser, setting img,
+centering the focal point of the img, fixing it
+to stay on scroll */
 
 .portrait {
-    margin-right: 0;
+    display: inline-block;
     width: 40%;
+    height: 100vh;
+    background-image: url('imgs/me.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
 }
 
-.name {
+
+/* setting up flex column to align name, class, and
+arrow, setting width and height */
+
+.left {
+    display: flex;
+    flex-direction: column;
+    float: left;
     height: 100vh;
     width: 60vw;
+}
+
+
+/* vertically centering the name/class div */
+
+.name {
+    margin: auto;
+    margin-left: 100px;
+}
+
+
+/* destination for the scroll arrow link, setting
+spacing between the lists */
+
+#links {
+    margin-right: 60px;
+    margin-top: 50px;
+}
+
+
+/* setting up div for project lists, row of 2 lists */
+
+.projectsContainer {
+    width:100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    margin-left: 100px;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+/* getting rid of underline on link */
+
+a {
+    color: #ff4e00;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+
+/* getting rid of bullets & spacing */
+
+ul {
+    margin-top: 40px;
+    margin-left: 100px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
 }
