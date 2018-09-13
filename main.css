@@ -68,10 +68,9 @@ arrow, setting width and height */
 }
 
 
-/* destination for the scroll arrow link, setting
-spacing between the lists */
+/* setting spacing between the lists */
 
-#links {
+.work {
     margin-right: 60px;
     margin-top: 50px;
 }
