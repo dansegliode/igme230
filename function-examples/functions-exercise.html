@@ -36,10 +36,10 @@
         
         function createList(listElement,array){
             for(let i = 0; i < array.length; i++) {
-                let colorList = document.querySelector(listElement);
+                let list = document.querySelector(listElement);
                 let item = document.createElement('li');
                 item.appendChild(document.createTextNode(array[i]));
-                colorList.appendChild(item);
+                list.appendChild(item);
             }
         }
          
