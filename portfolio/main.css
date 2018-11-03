@@ -11,14 +11,17 @@ body {
 
 nav {
     display: flex;
+    position: fixed;
     margin: 30px 30px;
+    top: 0;
+    width: 90vh;
     transform: rotate(90deg);
     transform-origin: left top 0;
 }
 
 a {
     font-size: .8rem;
-    font-weight: 100;
+    font-weight: 300;
     text-decoration: none;
     color: white;
     letter-spacing: 1.5px;
@@ -28,13 +31,14 @@ a {
     margin-right: 20px;
 }
 
-a span {
+/*nav hover*/
+nav a span {
     position: relative;
     display: inline-block;
     transition: .3s;
 }
 
-a span::before {
+nav a span::before {
     position: absolute;
     top: 100%;
     content: attr(data-hover);
@@ -42,10 +46,87 @@ a span::before {
     color: orangered;
 }
 
-a:hover span, a:focus span {
+nav a:hover span, nav a:focus span {
     transform: translateY(-100%);
 }
 
-a.current {
+nav a.current {
     color: orangered;
+}
+
+
+
+h2 {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 130px auto 100px auto;
+}
+
+.wrapper .about p {
+    font-size: 2.441rem;
+    font-weight: 200;
+    line-height: 3.5rem;
+}
+
+p {
+    color: white;
+}
+
+p span {
+    color: orangered;
+}
+
+.contact {
+    color: white;
+    width: 250px;
+    margin-right: 0px;
+    letter-spacing: 1px;
+}
+
+.contact #mail {
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.contact a {
+    color: white;
+    transition: all .3s ease;
+    margin: 0px -4px;
+}
+
+.contact a:hover {
+    color: orangered;
+}
+
+.contact p {
+    margin: 5px 0px;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.me {
+    min-width: 300px;
+    margin: 0;
+}
+
+.me img {
+    margin-left: 40px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }

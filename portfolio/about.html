@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <a href="index.html">
@@ -24,6 +26,40 @@
         </a>
     </nav>
 
-     <div></div>
+    <div class="wrapper">
+        <div class="about">
+            <p>hey, I'm sarah. I'm a <span>multidisciplinary designer</span> who likes <span>long island bagels</span>
+                and
+                dislikes <span>ice cream.</span></p>
+        </div>
+        <div class="bottom">
+        <div class="contact">
+            <h2>talk to me</h2>
+            <p id="mail">dansegliode@gmail.com</p>
+            <p>
+                <a href="http://instagram.com/dansegliode" target="_blank">instagram</a>
+            </p>
+            <p>
+                <a href="http://www.linkedin.com/in/sarah-danseglio-108b27160m" target="_blank">linkedin</a>
+            </p>
+            <p>
+                <a href="" onclick="showPic('me')">click for me</a>
+            </p>
+        </div>
+        <div class="me">
+            <img id="me" src="imgs/me.png">
+        </div>
+    </div>
+    </div>
 </body>
+
+<!--<script>
+    function showPic(id) {
+        var pic = document.getElementById(id);
+        if (pic.style.display == "none") {
+            pic.style.display = "";
+        }
+    }-->
+</script>
+
 </html>
