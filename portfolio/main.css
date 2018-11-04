@@ -4,12 +4,13 @@
 }
 
 
-
 body {
     background-color: black;
 }
 
 nav {
+    font-weight: 300;
+    letter-spacing: 1.5px;
     display: flex;
     position: fixed;
     margin: 30px 30px;
@@ -19,15 +20,16 @@ nav {
     transform-origin: left top 0;
 }
 
+nav a {
+    opacity: 0;
+}
+
 a {
     font-size: .8rem;
-    font-weight: 300;
     text-decoration: none;
     color: white;
-    letter-spacing: 1.5px;
     overflow: hidden;
     padding: 0 4px;
-    height: 1rem;
     margin-right: 20px;
 }
 
@@ -129,4 +131,68 @@ p span {
     width: 100%;
     max-width: 500px;
     height: auto;
+}
+
+/*work*/
+
+.wrapper2 {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: 130px 10px 130px 80px;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: auto;
+    height: 70vh;
+    transition: .3s;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+.title {
+    transition: .3s;
+}
+
+.project:hover {
+    opacity: 1 !important;
+}
+
+.project:hover .title {
+    transform: translateY(-7px);
+}
+
+.project p {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin: 0px 0px 5px 30px;
+    font-size: .7rem;
+    color: orangered;
+}
+
+.cary {
+    background-image: url("imgs/carycover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.nmdid {
+    background-image: url("imgs/nmdidcover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.threeD {
+    background-image: url("imgs/3dcover2.jpg");
+    background-size: cover;
+    background-position: center;
 }

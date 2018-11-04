@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <title>Sarah Danseglio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
+
 <body>
     <nav>
         <a href="index.html" class="current">
@@ -24,6 +27,61 @@
         </a>
     </nav>
 
-     <div></div>
+    <div class="wrapper2">
+        <a href="cary.html">
+            <div class="project cary">
+                <div class="title">
+                    <h3>UI/UX</h3>
+                    <p>CARY COLLECTION</p>
+                </div>
+            </div>
+        </a>
+        <a href="nmdid.html">
+            <div class="project nmdid">
+                <div class="title">
+                    <h3>MOTION</h3>
+                    <p>NMD ID PACKAGE</p>
+                </div>
+            </div>
+        </a>
+        <a href="3d.html">
+            <div class="project threeD">
+                <div class="title">
+                    <h3>3D</h3>
+                    <p>MISC. 3D</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
 </body>
+<script>
+    $('nav a').first().delay(100).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(2)').delay(200).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(3)').delay(300).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a').last().delay(400).animate({
+        'opacity': '1'
+    }, 600);
+
+    $('.project').delay(200).animate({
+        'opacity': '.7'
+    }, 400);
+
+    $(document).ready(function () {
+        $("nav a").click(function (e) {
+            e.preventDefault();
+            $link = $(this).attr("href");
+            $("body").fadeOut(200, function () {
+                window.location = $link;
+            });
+        });
+    });
+</script>
+
 </html>

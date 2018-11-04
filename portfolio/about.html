@@ -8,6 +8,7 @@
     <title>Sarah Danseglio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -30,36 +31,50 @@
         <div class="about">
             <p>hey, I'm sarah. I'm a <span>multidisciplinary designer</span> who likes <span>long island bagels</span>
                 and
-                dislikes <span>ice cream.</span></p>
+                dislikes <span>putting a case on my phone.</span></p>
         </div>
         <div class="bottom">
-        <div class="contact">
-            <h2>talk to me</h2>
-            <p id="mail">dansegliode@gmail.com</p>
-            <p>
-                <a href="http://instagram.com/dansegliode" target="_blank">instagram</a>
-            </p>
-            <p>
-                <a href="http://www.linkedin.com/in/sarah-danseglio-108b27160m" target="_blank">linkedin</a>
-            </p>
-            <p>
-                <a href="" onclick="showPic('me')">click for me</a>
-            </p>
+            <div class="contact">
+                <h2>talk to me</h2>
+                <p id="mail">dansegliode@gmail.com</p>
+                <p>
+                    <a href="http://instagram.com/dansegliode" target="_blank">instagram</a>
+                </p>
+                <p>
+                    <a href="http://www.linkedin.com/in/sarah-danseglio-108b27160m" target="_blank">linkedin</a>
+                </p>
+            </div>
+            <div class="me">
+                <img id="me" src="imgs/me.png">
+            </div>
         </div>
-        <div class="me">
-            <img id="me" src="imgs/me.png">
-        </div>
-    </div>
     </div>
 </body>
 
-<!--<script>
-    function showPic(id) {
-        var pic = document.getElementById(id);
-        if (pic.style.display == "none") {
-            pic.style.display = "";
-        }
-    }-->
+<script>
+    $('nav a').first().delay(100).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(2)').delay(200).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(3)').delay(300).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a').last().delay(400).animate({
+        'opacity': '1'
+    }, 600);
+
+    $(document).ready(function () {
+        $('body').hide().fadeIn(400);
+        $("nav a").click(function (e) {
+            e.preventDefault();
+            $link = $(this).attr("href");
+            $("body").fadeOut(200, function () {
+                window.location = $link;
+            });
+        });
+    });
 </script>
 
 </html>
