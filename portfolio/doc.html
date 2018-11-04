@@ -7,6 +7,10 @@
     <title>Sarah Danseglio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -26,4 +30,29 @@
 
      <div></div>
 </body>
+<script>
+        $('nav a').first().delay(100).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(2)').delay(200).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(3)').delay(300).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a').last().delay(400).animate({
+            'opacity': '1'
+        }, 600);
+    
+        $(document).ready(function () {
+            $('body').hide().fadeIn(400);
+            $("nav a").click(function (e) {
+                e.preventDefault();
+                $link = $(this).attr("href");
+                $("body").fadeOut(200, function () {
+                    window.location = $link;
+                });
+            });
+        });
+    </script>
 </html>
