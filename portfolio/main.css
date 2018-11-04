@@ -1,11 +1,15 @@
 * {
     box-sizing: border-box;
     font-family: 'Libre Franklin', Helvetica, sans-serif;
+
+    /* SVG cursor */
+    cursor: url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/' x='0px' y='0px' width='18.3px' height='18.3px' viewBox='0 0 18.3 18.3' style='enable-background:new 0 0 18.3 18.3;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.9;fill:%23FF2A00;%7D%0A%3C/style%3E%3Cdefs%3E%3C/defs%3E%3Ccircle class='st0' cx='9.2' cy='9.2' r='9.2'/%3E%3C/svg%3E%0A") 10 10, auto;
 }
 
 
 body {
-    background-color: black;
+    width: auto;
+    background-color: #0a0a0a;
 }
 
 nav {
@@ -44,12 +48,13 @@ nav a span::before {
     position: absolute;
     top: 100%;
     content: attr(data-hover);
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
     color: orangered;
 }
 
-nav a:hover span, nav a:focus span {
-    transform: translateY(-100%);
+nav a:hover span,
+nav a:focus span {
+     transform: translateY(-100%);
 }
 
 nav a.current {
@@ -81,6 +86,10 @@ h2 {
 
 p {
     color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    letter-spacing: .02rem;
 }
 
 p span {
@@ -128,15 +137,19 @@ p span {
 
 .me img {
     margin-left: 40px;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     height: auto;
+}
+
+.me img:hover {
+    cursor: url("imgs/woof.png"), auto;
 }
 
 /*work*/
 
 .wrapper2 {
-    width: 90vw;
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin: 130px 10px 130px 80px;
@@ -147,7 +160,7 @@ p span {
     flex-direction: row;
     align-items: flex-end;
     width: auto;
-    height: 70vh;
+    height: 80vh;
     transition: .3s;
     margin-bottom: 30px;
     opacity: 0;
@@ -155,6 +168,7 @@ p span {
 
 .title {
     transition: .3s;
+    margin-left: 30px;
 }
 
 .project:hover {
@@ -169,12 +183,11 @@ p span {
     font-size: .9rem;
     font-weight: 500;
     margin-top: 0px;
-    margin-left: 30px;
     margin-bottom: 30px;
 }
 
 h3 {
-    margin: 0px 0px 5px 30px;
+    margin-bottom: 5px;
     font-size: .7rem;
     color: orangered;
 }
@@ -195,4 +208,86 @@ h3 {
     background-image: url("imgs/3dcover2.jpg");
     background-size: cover;
     background-position: center;
+}
+
+/*RESUME*/
+
+.wrapper3 {
+    display: flex;
+    width: 60%;
+    flex-direction: row;
+    margin: 70px auto;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    width: 70%;
+}
+
+.right {
+    width: 30%;
+}
+
+.right h3, .left h3 {
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+
+.left p {
+    max-width: 400px;
+}
+
+.left p, .right p {
+    margin: 5px 30px 5px 0px;
+}
+
+.date {
+    color: gray;
+    font-size: .7rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h4 {
+    color: white;
+    margin: 10px 0px 0px 0px;
+}
+
+.two {
+    margin-top: 30px;
+}
+
+
+/* resume PRINT */
+
+@page {
+    size: A4;
+}
+
+@media print {
+    nav{
+    display: none;
+    }
+
+    .wrapper3 {
+        width: 90%;
+        margin-top: 30pt;
+        margin-bottom: 0pt;
+    }
+
+    .left p, .right p{
+        color: black;
+    }
+
+    h4 {
+        color: black;
+    }
+
+    img.logo {
+        display: none;
+    }
 }

@@ -7,6 +7,7 @@
     <title>Sarah Danseglio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
     <nav>
@@ -24,6 +25,66 @@
         </a>
     </nav>
 
-     <div></div>
+     <div class="wrapper3">
+         <div class="left">
+            <h3>EDUCATION</h3>
+            <h4>Rochester Institute of Technology</h4>
+            <p class="date">2016-2020</p>
+            <p>BFA, New Media Design<br>Immersion, French</p>
+            
+            <h3>EXPERIENCE</h3>
+            <h4>B-Reel, Design Intern</h4>
+            <p class="date">Summer 2018</p>
+            <p>Worked as a part of the design team on various projects and pitches for clients like YouTube and American Express.</p>
+            <p class="date">Visual Design, UI, Illustration</p>
+
+            <h4 class="two">M&M Social Media, Design Intern</h4>
+            <p class="date">Summer 2017</p>
+            <p>Worked on a small team as a designer creating content and graphics for clients and the company.</p>
+            <p class="date">Posters, Ads, Social Personas, Presentations, Photography</p>
+            
+            <h3>INVOLVEMENT</h3>
+            <h4>New Media Club Mentor</h4>
+            <p class="date">Fall 2018-Present</p>
+            <p>As a mentor and club member, I help underclassmen with their work, attend meetings and workshops, and get to know my peers.</p>
+         </div>
+
+         <div class="right">
+            <h3>SKILLS</h3>
+            <p>UI/UX Design<br>Motion Design<br>Visual Design<br>Illustration<br>HTML/CSS/JS</p>
+
+            <h3>TOOLS</h3>
+            <p>Adobe Suite<br>Cinema 4D & Arnold<br>Figma<br>Sketch<br>Principle</p>
+
+            <h3>INTERESTS</h3>
+            <p>Painting<br>Reading<br>Photography<br>Eating<br>Dogs</p>
+         </div>
+     </div>
 </body>
+
+<script>
+        $('nav a').first().delay(100).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(2)').delay(200).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(3)').delay(300).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a').last().delay(400).animate({
+            'opacity': '1'
+        }, 600);
+    
+        $(document).ready(function () {
+            $('body').hide().fadeIn(400);
+            $("nav a").click(function (e) {
+                e.preventDefault();
+                $link = $(this).attr("href");
+                $("body").fadeOut(200, function () {
+                    window.location = $link;
+                });
+            });
+        });
+    </script>
 </html>
