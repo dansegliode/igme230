@@ -61,7 +61,14 @@ nav a.current {
     color: orangered;
 }
 
-
+.logo {
+    margin: 0 auto;
+    width: 100px;
+    position: fixed;
+    z-index: 2;
+    top: 30px;
+    left: 45%;
+}
 
 h2 {
     color: white;
@@ -398,6 +405,10 @@ div.box:nth-child(3) {
         overflow-x: hidden;
     }
 
+    .logo {
+        left: 40%;
+    }
+
     nav {
         display: none;
     }
@@ -434,7 +445,7 @@ div.box:nth-child(3) {
     .wrapper3 {
         position: relative;
         flex-direction: column;
-        margin: 100px 30px 100px 30px;
+        margin: 130px 30px 100px 30px;
         width: 90%;
         transition: .3s;
     }
@@ -442,7 +453,7 @@ div.box:nth-child(3) {
     .wrapper {
         position: relative;
         width: 90%;
-        margin: 80px 0px 50px 0px;
+        margin: 130px 0px 50px 0px;
         transition: .3s;
     }
 
@@ -454,7 +465,7 @@ div.box:nth-child(3) {
     .wrapper2 {
         position: relative;
         width: 100%;
-        margin: 100px 0px 50px 0px;
+        margin: 160px 0px 50px 0px;
         transition: .3s;
         background-color: #0a0a0a;
     }
