@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,10 @@
     <title>Sarah Danseglio</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
         <a href="index.html">
@@ -27,32 +27,53 @@
             <span data-hover="DOCS">DOCS</span>
         </a>
     </nav>
+    <div class="wrapper">
+        <h3>TYPEFACES</h3>
+        <p><a href="https://fonts.google.com/specimen/Libre+Franklin">Libre Franklin</a></p>
 
-     <div></div>
+        <h3>LIBRARIES</h3>
+        <p><a href="https://code.jquery.com/">JQuery Core 3.3.1</a></p>
+
+        <h3>CODE</h3>
+        <p><a href="https://codepen.io/blondersholmvik/pen/BLKxZE">Fade in on page load</a></p>
+        <p><a href="https://stackoverflow.com/questions/35361221/page-fadein-and-fadeout-transition">Fade out on page
+                change</a></p>
+        <p><a href="https://tympanus.net/Development/CreativeLinkEffects/">Navigation link hover</a></p>
+
+
+        <h3>CHALLENGES</h3>
+        <p>The most challenging part of designing this site was getting the fade in and out to happen on page load. I
+            found a good solution for both and had to figure out how to have them integrate with the code I already
+            had.</p>
+        <p>Another more constant challenge I had was making sure the pages looked like the ones I designed beforehand
+            in Figma. With a lot of tweaking I got everything to a point where I was happy with how it looked and
+            responded. </p>
+    </div>
 </body>
 <script>
-        $('nav a').first().delay(100).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a:nth-child(2)').delay(200).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a:nth-child(3)').delay(300).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a').last().delay(400).animate({
-            'opacity': '1'
-        }, 600);
-    
-        $(document).ready(function () {
-            $('body').hide().fadeIn(400);
-            $("nav a").click(function (e) {
-                e.preventDefault();
-                $link = $(this).attr("href");
-                $("body").fadeOut(200, function () {
-                    window.location = $link;
-                });
+    $('nav a').first().delay(100).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(2)').delay(200).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(3)').delay(300).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a').last().delay(400).animate({
+        'opacity': '1'
+    }, 600);
+
+    $(document).ready(function () {
+        $('body').hide().fadeIn(400);
+        $("nav a").click(function (e) {
+            e.preventDefault();
+            $link = $(this).attr("href");
+            $("body").fadeOut(200, function () {
+                window.location = $link;
             });
         });
-    </script>
+    });
+</script>
+
 </html>

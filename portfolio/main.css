@@ -25,15 +25,15 @@ nav {
 }
 
 nav a {
+    margin-left: 10px;
     opacity: 0;
+    font-size: .8rem;
 }
 
 a {
-    font-size: .8rem;
     text-decoration: none;
     color: white;
     overflow: hidden;
-    padding: 0 4px;
     margin-right: 20px;
 }
 
@@ -104,15 +104,16 @@ p span {
 }
 
 .contact #mail {
-    letter-spacing: 1.5px;
+    letter-spacing: .05rem;
     font-weight: 300;
     font-size: .8rem;
 }
 
 .contact a {
+    font-size: .8rem;
     color: white;
     transition: all .3s ease;
-    margin: 0px -4px;
+    letter-spacing: .05rem;
 }
 
 .contact a:hover {
@@ -216,7 +217,7 @@ h3 {
     display: flex;
     width: 60%;
     flex-direction: row;
-    margin: 70px auto;
+    margin: 130px auto;
 }
 
 .left, .right {
@@ -238,7 +239,7 @@ h3 {
 }
 
 .left p {
-    max-width: 70%;
+    max-width: 400px;
 }
 
 .left p, .right p {
@@ -290,4 +291,23 @@ h4 {
     img.logo {
         display: none;
     }
+}
+
+
+/* DOCS */
+
+.wrapper p a {
+    transition: all .3s ease;
+}
+
+.wrapper p a:hover {
+    color: orangered;
+}
+
+.wrapper h3 {
+    margin-top: 60px;
+}
+
+.wrapper p {
+    margin: 10px 0px 0px 0px;
 }
