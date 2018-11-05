@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sarah Danseglio</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+            <section class="burger">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </section>
+        </label>
+    
+        <div class="mobilenav">
+            <a href="index.html" class="current">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="resume.html">RESUME</a>
+            <a href="doc.html">DOCS</a>
+        </div>
+    
+    <nav>
+        <a href="index.html" class="current">
+            <span data-hover="WORK">WORK</span>
+        </a>
+        <a href="about.html">
+            <span data-hover="ABOUT">ABOUT</span>
+        </a>
+        <a href="resume.html">
+            <span data-hover="RESUME">RESUME</span>
+        </a>
+        <a href="doc.html" >
+            <span data-hover="DOCS">DOCS</span>
+        </a>
+    </nav>
+
+    <div class="wrapper2">
+            <div class="wrapper4"><h2>3D Work</h2>
+            <p>Below are various examples of my 3d work, made in Cinema 4D with the physical and arnold renderers. In C4D I modeled the objects and created textures, scenes, and lighting setups.</p>
+        </div>
+            <img src="imgs/3dcover2.jpg">
+            <img src="imgs/3d-one.jpg">
+            <img src="imgs/3d-seven.jpg">
+            <img src="imgs/3d-two.jpg">
+            <img src="imgs/3d-four.jpg">
+            <img src="imgs/3d-six.jpg">
+            <img src="imgs/3d-three.jpg">
+
+        </div>
+</body>
+<script>
+        $('nav a').first().delay(100).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(2)').delay(200).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a:nth-child(3)').delay(300).animate({
+            'opacity': '1'
+        }, 600);
+        $('nav a').last().delay(400).animate({
+            'opacity': '1'
+        }, 600);
+    
+        $(document).ready(function () {
+        $('body').hide().fadeIn(400);
+        $("nav a").click(function (e) {
+            e.preventDefault();
+            $link = $(this).attr("href");
+            $("body").fadeOut(200, function () {
+                window.location = $link;
+            });
+        });
+    });
+    </script>
+</html>
