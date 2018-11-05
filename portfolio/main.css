@@ -215,7 +215,7 @@ h3 {
 
 .wrapper3 {
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-direction: row;
     margin: 130px auto;
 }
@@ -393,6 +393,11 @@ div.box:nth-child(3) {
 }
 
 @media (max-width: 640px) {
+    html {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     nav {
         display: none;
     }
