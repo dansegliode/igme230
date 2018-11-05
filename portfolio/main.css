@@ -343,6 +343,8 @@ video {
 
 }
 
+/* custom scroll */
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -374,7 +376,7 @@ label {
     display: none;
     opacity: 0;
     transition: .3s;
-    background-color: black;
+    background-color: #0a0a0a;
     width: 100%;
     height: 100%;
     pointer-events: none;
