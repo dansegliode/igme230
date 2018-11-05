@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,24 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
 </head>
+
 <body>
-        <input type="checkbox" id="nav-trigger" class="nav-trigger">
-        <label for="nav-trigger">
-            <section class="burger">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </section>
-        </label>
-    
-        <div class="mobilenav">
-            <a href="index.html" class="current">WORK</a>
-            <a href="about.html">ABOUT</a>
-            <a href="resume.html">RESUME</a>
-            <a href="doc.html">DOCS</a>
-        </div>
-    
+    <input type="checkbox" id="nav-trigger" class="nav-trigger">
+    <label for="nav-trigger">
+        <section class="burger">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </section>
+    </label>
+
+    <div class="mobilenav">
+        <a href="index.html" class="current">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="resume.html">RESUME</a>
+        <a href="doc.html">DOCS</a>
+    </div>
+
     <nav>
         <a href="index.html" class="current">
             <span data-hover="WORK">WORK</span>
@@ -42,32 +44,36 @@
         </a>
     </nav>
 
-     <div class="wrapper2">
-        <div class="wrapper4"><h2>The Cary Collection</h2>
-        <p>The Cary Graphic Arts Collection is an archive of graphic communication history. It is located in the RIT library, and houses 40,000 volumes and manuscripts.</p>
-        <p>Their website is dated- at 10 years old it lacks accessible content and turns students away rather than engage them. Steven and Amelia, the curators of the collection, were the clients for the redesign of their site.</p>
-        <p>For this project, I used Adobe Illustrator, After Effects, and Invision.</p>
-    </div>
+    <div class="wrapper2">
+        <div class="wrapper4">
+            <h2>The Cary Collection</h2>
+            <p>The Cary Graphic Arts Collection is an archive of graphic communication history. It is located in the
+                RIT library, and houses 40,000 volumes and manuscripts.</p>
+            <p>Their website is dated- at 10 years old it lacks accessible content and turns students away rather than
+                engage them. Steven and Amelia, the curators of the collection, were the clients for the redesign of
+                their site.</p>
+            <p>For this project, I used Adobe Illustrator, After Effects, and Invision.</p>
+        </div>
         <video controls loop src="imgs/CARYfinalPT.mp4" type="video/mp4"></video>
 
         <img src="imgs/carycover.jpg">
 
 </body>
 <script>
-        $('nav a').first().delay(100).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a:nth-child(2)').delay(200).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a:nth-child(3)').delay(300).animate({
-            'opacity': '1'
-        }, 600);
-        $('nav a').last().delay(400).animate({
-            'opacity': '1'
-        }, 600);
-    
-        $(document).ready(function () {
+    $('nav a').first().delay(100).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(2)').delay(200).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a:nth-child(3)').delay(300).animate({
+        'opacity': '1'
+    }, 600);
+    $('nav a').last().delay(400).animate({
+        'opacity': '1'
+    }, 600);
+
+    $(document).ready(function () {
         $('body').hide().fadeIn(400);
         $("nav a").click(function (e) {
             e.preventDefault();
@@ -77,5 +83,6 @@
             });
         });
     });
-    </script>
+</script>
+
 </html>
