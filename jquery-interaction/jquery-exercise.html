@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactivity Exercise</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+
+        #img1 {
+            background-color: darkolivegreen;
+        }
+
+        #img2 {
+            background-color: cornflowerblue;
+        }
+        
+        #img3 {
+            background-color: burlywood;
+        }
+
+        img{
+            max-width: 70%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" id="img1">
+        <img src="https://img.clasf.co.za/2016/06/22/Dalmatian-puppies-for-sale-20160622130950.jpg">
+    </div>
+    <div class="wrapper" id="img2">
+        <img src="http://images2.fanpop.com/image/photos/9400000/Aaaaaawwwwwwwwww-Sweet-puppies-9415255-1600-1200.jpg">
+    </div>
+    <div class="wrapper" id="img3">
+        <img src="https://www.chien-calme.com/images/actualites/litchiot.jpg">
+    </div>
+
+    <script>
+        $("a[href^='#']").click(function (event) {
+            event.preventDefault();
+            let target = $(this.hash);
+
+        $('html, body').animate({ scrollTop: target.offset().top }, 500); });
+    </script>
+</body>
+</html>
