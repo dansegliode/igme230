@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,55 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             font-family: Helvetica, Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column; /* main axis vertical; places menu below togglebar */
+            align-items: flex-end;  /* moves contents to end of cross-axis (horizontal) */
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #togglebar {
+            height: 25px;
+            width: 155px;
+            border: 1px solid;
+            text-align: center;
+            position: fixed;
+            background-color: white; 
+            z-index: 3;
+            right: 30px;
+            top: 30px;
+        }
+
+        #menu {
+            height: 120px;
+            width: 155px;
+            position: fixed;
+            top: 25px;
+            background-color: #555;
+            border: 1px solid black;
+            border-top: none;
+            top: 50px;
+            right: 30px;
+            z-index: 2;
         }
 
         .wrapper {
@@ -32,18 +78,31 @@
         #img2 {
             background-color: cornflowerblue;
         }
-        
+
         #img3 {
             background-color: burlywood;
         }
 
-        img{
+        img {
             max-width: 70%;
+            max-height: 70%;
             margin: 0 auto;
         }
     </style>
 </head>
+
 <body>
+    <nav>
+        <div id="togglebar">Open/Close Menu</div>
+        <div id="menu">
+            <ul>
+                <li><a href="#img1">one</a></li>
+                <li><a href="#img2">two</a></li>
+                <li><a href="#img3">three</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="wrapper" id="img1">
         <img src="https://img.clasf.co.za/2016/06/22/Dalmatian-puppies-for-sale-20160622130950.jpg">
     </div>
@@ -54,12 +113,21 @@
         <img src="https://www.chien-calme.com/images/actualites/litchiot.jpg">
     </div>
 
+
     <script>
         $("a[href^='#']").click(function (event) {
             event.preventDefault();
             let target = $(this.hash);
 
-        $('html, body').animate({ scrollTop: target.offset().top }, 500); });
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        });
+
+        $("#togglebar").click(function () {
+            $("#menu").slideToggle("slow");
+        });
     </script>
 </body>
+
 </html>
