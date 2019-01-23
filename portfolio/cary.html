@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+    <script src="fade.js"></script>
     <input type="checkbox" id="nav-trigger" class="nav-trigger">
     <label for="nav-trigger">
         <section class="burger">
@@ -31,22 +31,22 @@
     </div>
 
     <nav>
-        <a href="index.html" class="current">
+        <a href="index.html" id="fade1" class="current">
             <span data-hover="WORK">WORK</span>
         </a>
-        <a href="about.html">
+        <a href="about.html" id="fade2">
             <span data-hover="ABOUT">ABOUT</span>
         </a>
-        <a href="resume.html">
+        <a href="resume.html" id="fade3">
             <span data-hover="RESUME">RESUME</span>
         </a>
-        <a href="doc.html">
+        <a href="doc.html" id="fade4">
             <span data-hover="DOCS">DOCS</span>
         </a>
     </nav>
 
     <img class="logo" src="imgs/logo.svg">
-    <div class="wrapper2">
+    <div class="wrapper2" id="fade5">
         <div class="wrapper4">
             <h2>The Cary Collection</h2>
             <p>The Cary Graphic Arts Collection is an archive of graphic communication history. It is located in the
@@ -61,30 +61,5 @@
         <img src="imgs/carycover.jpg">
 
 </body>
-<script>
-    $('nav a').first().delay(100).animate({
-        'opacity': '1'
-    }, 600);
-    $('nav a:nth-child(2)').delay(200).animate({
-        'opacity': '1'
-    }, 600);
-    $('nav a:nth-child(3)').delay(300).animate({
-        'opacity': '1'
-    }, 600);
-    $('nav a').last().delay(400).animate({
-        'opacity': '1'
-    }, 600);
-
-    $(document).ready(function () {
-        $('body').hide().fadeIn(400);
-        $("nav a").click(function (e) {
-            e.preventDefault();
-            $link = $(this).attr("href");
-            $("body").fadeOut(200, function () {
-                window.location = $link;
-            });
-        });
-    });
-</script>
 
 </html>
