@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Libre Franklin', Helvetica, sans-serif;
+    font-family: 'Poppins', Helvetica, sans-serif;
 
     /* SVG cursor */
     cursor: url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/' x='0px' y='0px' width='18.3px' height='18.3px' viewBox='0 0 18.3 18.3' style='enable-background:new 0 0 18.3 18.3;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.9;fill:%23FF2A00;%7D%0A%3C/style%3E%3Cdefs%3E%3C/defs%3E%3Ccircle class='st0' cx='9.2' cy='9.2' r='9.2'/%3E%3C/svg%3E%0A") 10 10, auto;
@@ -22,10 +22,12 @@ nav {
     width: 90vh;
     transform: rotate(90deg);
     transform-origin: left top 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav a {
     margin-left: 10px;
+    margin-right: 20px;
     opacity: 0;
     font-size: .8rem;
 }
@@ -34,7 +36,6 @@ a {
     text-decoration: none;
     color: white;
     overflow: hidden;
-    margin-right: 20px;
 }
 
 /*nav hover*/
@@ -63,11 +64,10 @@ nav a.current {
 
 .logo {
     margin: 0 auto;
-    width: 100px;
-    position: fixed;
-    z-index: 2;
-    top: 30px;
+    width: 50px;
+    top: 40px;
     left: 45%;
+    position: relative;
 }
 
 h2 {
@@ -78,21 +78,17 @@ h2 {
     margin-top: 0px;
 }
 
-#fade1, #fade2, #fade3, #fade4, #fade5, #fade6 {
+#fade1, #fade2, #fade3, #fade5, #fade6 {
 	opacity: 1;
 	transition: 1s all cubic-bezier(0.400, 0.015, 0.530, 1.015);
 }
 
 #fade2 {
-	transition-delay: .2s;
+	transition-delay: .1s;
 }
 
 #fade3 {
-	transition-delay: .5s;
-}
-
-#fade4 {
-	transition-delay: .8s;
+	transition-delay: .2s;
 }
 
 #fade5 {
@@ -100,7 +96,7 @@ h2 {
 }
 
 /* what the fades turn into from full opacity to none */
-#fade1.fade, #fade2.fade, #fade3.fade, #fade4.fade, #fade5.fade{
+#fade1.fade, #fade2.fade, #fade3.fade, #fade5.fade{
 	opacity: 0;
 	transition: none;
 }
@@ -112,10 +108,15 @@ h2 {
     margin: 160px auto 100px auto;
 }
 
+
 .wrapper .about p {
     font-size: 2.441rem;
     font-weight: 200;
     line-height: 3.5rem;
+}
+
+.wrapper2 p {
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -171,7 +172,7 @@ p span {
 }
 
 .me img {
-    margin-left: 40px;
+    margin-left: 50px;
     width: 90%;
     max-width: 500px;
     height: auto;
@@ -187,7 +188,7 @@ p span {
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin: 130px 10px 130px 80px;
+    margin: 130px 10px 130px 50px;
 }
 
 .project {
@@ -198,7 +199,9 @@ p span {
     height: 80vh;
     transition: .3s;
     margin-bottom: 30px;
+    margin-left: 30px;
     opacity: .7;
+    border-radius: 2px;
 }
 
 .title {
@@ -215,16 +218,24 @@ p span {
 }
 
 .project p {
-    font-size: .9rem;
-    font-weight: 500;
+    font-size: 1.1rem;
     margin-top: 0px;
     margin-bottom: 30px;
+    letter-spacing: .04rem;
 }
 
 h3 {
     margin-bottom: 5px;
     font-size: .7rem;
     color: orangered;
+}
+
+.wrapper4 h3 {
+    margin-top: 60px;
+}
+
+.wrapper4 p {
+    margin-bottom: 30px;
 }
 
 .cary {
@@ -290,6 +301,10 @@ h3 {
     margin: 0px;
 }
 
+h3 {
+    margin-bottom: 10px;
+}
+
 h4 {
     color: white;
     margin: 10px 0px 0px 0px;
@@ -332,43 +347,34 @@ h4 {
 }
 
 
-/* DOCS */
-
-.wrapper p a {
-    transition: all .3s ease;
-}
-
-.wrapper p a:hover {
-    color: orangered;
-}
-
-.wrapper h3 {
-    margin-top: 60px;
-}
-
-.wrapper p {
-    margin: 10px 0px 0px 0px;
-}
-
 /*cary*/
 
 
 video {
     margin: 40px auto 10px auto;
-    width: 100%;
+    width: 90%;
 }
 
 .wrapper4 {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
+    max-width: 700px;
+}
+
+.wrapper4 h2 {
+    font-family: 'Major Mono Display', monospace;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 200;
 }
 
 .wrapper2 img {
     height: 100%;
-    width: 100%;
-    margin-top: 20px;
+    width: 90%;
+    margin: 20px auto 0px auto;
 
 }
+
 
 /* custom scroll */
 
@@ -436,6 +442,7 @@ div.box:nth-child(3) {
 
     .logo {
         left: 30px;
+        right: unset;
     }
 
     nav {
@@ -455,7 +462,7 @@ div.box:nth-child(3) {
         position: fixed;
         top: 11px;
         right: 0px;
-        z-index: 2;
+        z-index: 3;
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -469,6 +476,9 @@ div.box:nth-child(3) {
     .project {
         opacity: 1 !important;
         height: 40vh;
+        margin-right: 20px;
+        margin-left: 20px;
+        max-width: 1000px;
     }
 
     .wrapper3 {
@@ -494,7 +504,7 @@ div.box:nth-child(3) {
     .wrapper2 {
         position: relative;
         width: 100%;
-        margin: 160px 0px 50px 0px;
+        margin: 90px 0px 50px 0px;
         transition: .3s;
         background-color: #0a0a0a;
     }
@@ -509,15 +519,20 @@ div.box:nth-child(3) {
         margin: 60px 30px 30px 30px;
     }
 
+    .wrapper4 h2 {
+        font-size: 2rem;
+    }
+
     .mobilenav a:active {
         color: orangered;
     }
 
     .nav-trigger:checked~.wrapper2,
     .nav-trigger:checked~.wrapper3,
+    .nav-trigger:checked~.wrapper4,
     .nav-trigger:checked~.wrapper {
         opacity: 0;
-        /* disable links */
+        /* disable underneath links */
         pointer-events: none;
     }
 
@@ -527,13 +542,15 @@ div.box:nth-child(3) {
         flex-direction: column;
         position: fixed;
         pointer-events: all;
-        margin-top: 40px;
+        margin-top: 0px;
+        padding-top: 200px;
+        z-index: 2;
     }
 
     .nav-trigger:checked~.mobilenav a {
         text-align: center;
         opacity: 1;
-        margin: 30px 0px;
+        margin: 20px 0px;
         width: 100vw;
         font-size: 2rem;
         font-weight: 200;
