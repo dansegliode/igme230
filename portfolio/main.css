@@ -12,6 +12,14 @@ body {
     background-color: #0a0a0a;
 }
 
+.light h2, .light p, .light a {
+    color: black;
+}
+
+.light {
+    background-color: #EAEAEA;
+}
+
 nav {
     font-weight: 300;
     letter-spacing: 1.5px;
@@ -196,12 +204,14 @@ p span {
     flex-direction: row;
     align-items: flex-end;
     width: auto;
-    height: 80vh;
+    max-width: 1500px;
+    height: 50vh;
     transition: .3s;
-    margin-bottom: 30px;
-    margin-left: 30px;
+    /* margin-bottom: 30px; */
+    margin: 0 auto 30px auto;
+    /* margin-left: 30px; */
     opacity: .7;
-    border-radius: 2px;
+    /* border-radius: 2px; */
 }
 
 .title {
@@ -226,6 +236,7 @@ p span {
 
 h3 {
     margin-bottom: 5px;
+    letter-spacing: .08rem;
     font-size: .7rem;
     color: orangered;
 }
@@ -236,6 +247,8 @@ h3 {
 
 .wrapper4 p {
     margin-bottom: 30px;
+    font-size: .9rem;
+    line-height: 1.6rem;
 }
 
 .cary {
@@ -252,6 +265,24 @@ h3 {
 
 .threeD {
     background-image: url("imgs/3dcover2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.thirsty {
+    background-image: url("imgs/thirsty.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.grub {
+    background-image: url("imgs/grubguru.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.house {
+    background-image: url("imgs/housekeeping.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -353,28 +384,33 @@ h4 {
 video {
     margin: 40px auto 10px auto;
     width: 90%;
+    max-width: 1200px;
+    background-color: transparent !important;
 }
 
 .wrapper4 {
     width: 70%;
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 650px;
 }
 
 .wrapper4 h2 {
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Poppins', monospace;
     margin-bottom: 40px;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .wrapper2 img {
     height: 100%;
     width: 90%;
+    max-width: 1000px;
     margin: 20px auto 0px auto;
-
 }
 
+.wrapper2 .smallimg {
+    width: 70%;
+}
 
 /* custom scroll */
 
@@ -473,6 +509,26 @@ div.box:nth-child(3) {
         width: 100vw;
     }
 
+    .light {
+        background-color: #EAEAEA;
+    }
+
+    .light .box {
+        background-color: black;
+    }
+
+    .light .mobilenav .current {
+        color: orangered;
+    }
+
+    .light .mobilenav {
+        background-color: #EAEAEA; 
+    }
+
+    .wrapper2 .smallimg {
+        width: 90%;
+    }
+
     .project {
         opacity: 1 !important;
         height: 40vh;
@@ -506,7 +562,7 @@ div.box:nth-child(3) {
         width: 100%;
         margin: 90px 0px 50px 0px;
         transition: .3s;
-        background-color: #0a0a0a;
+        /* background-color: #0a0a0a; */
     }
 
     .wrapper2 a {
