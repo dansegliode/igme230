@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById('fade1').className += ' fade';
 	document.getElementById('fade2').className += ' fade';
 	document.getElementById('fade3').className += ' fade';
-	document.getElementById('fade5').className += ' fade';
+	// document.getElementById('fade5').className += ' fade';
 });
 
 $(function () {
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$('body').css('display', 'none');
 	
-	$('body').fadeIn(300);
+	$('body').fadeIn(400);
 	
 	
 
@@ -27,21 +27,11 @@ $('a').click(function() {
 	newLocation = this.href;
 
 	$('body').fadeOut(300, newpage);
-
-	setTimeout(
-		function() 
-		{
-			if($('body').hasClass('light')) {
-				$('body').removeClass('light');
-			}
-		},200);
-
-
-	});
 	
 	function newpage() {
 	
 	window.location = newLocation;
 	
 	}
+});
 });
