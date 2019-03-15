@@ -12,10 +12,36 @@ $(function () {
 	$('#fade5').removeClass('fade');
 });
 
-$("a").click(function (e) {
-	e.preventDefault();
-	$link = $(this).attr("href");
-	$("wrapper").fadeOut(500, function () {
-		window.location = $link;
+$(document).ready(function() {
+
+	$('body').css('display', 'none');
+	
+	$('body').fadeIn(300);
+	
+	
+
+$('a').click(function() {
+
+	event.preventDefault();
+	
+	newLocation = this.href;
+
+	$('body').fadeOut(300, newpage);
+
+	setTimeout(
+		function() 
+		{
+			if($('body').hasClass('light')) {
+				$('body').removeClass('light');
+			}
+		},200);
+
+
 	});
+	
+	function newpage() {
+	
+	window.location = newLocation;
+	
+	}
 });

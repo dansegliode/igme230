@@ -18,6 +18,11 @@ body {
 
 .light {
     background-color: #EAEAEA;
+
+}
+
+.nobottom {
+    margin-bottom: 0;
 }
 
 nav {
@@ -86,7 +91,7 @@ h2 {
     margin-top: 0px;
 }
 
-#fade1, #fade2, #fade3, #fade5, #fade6 {
+#fade1, #fade2, #fade3, #fade5 {
 	opacity: 1;
 	transition: 1s all cubic-bezier(0.400, 0.015, 0.530, 1.015);
 }
@@ -193,10 +198,10 @@ p span {
 /*work*/
 
 .wrapper2 {
-    width: 90%;
+    /* max-width: 1500px; */
     display: flex;
     flex-direction: column;
-    margin: 130px 10px 130px 50px;
+    margin: 130px 45px 130px 50px;
 }
 
 .project {
@@ -204,7 +209,7 @@ p span {
     flex-direction: row;
     align-items: flex-end;
     width: auto;
-    max-width: 1500px;
+    max-width: 1300px;
     height: 50vh;
     transition: .3s;
     /* margin-bottom: 30px; */
@@ -505,12 +510,14 @@ div.box:nth-child(3) {
     }
 
     body {
+        transition: 1s ease-in-out;
         margin: 0;
         width: 100vw;
     }
 
     .light {
         background-color: #EAEAEA;
+        transition: 1s ease;
     }
 
     .light .box {
