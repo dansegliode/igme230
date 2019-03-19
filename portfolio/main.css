@@ -408,6 +408,11 @@ video {
     max-width: 1200px;
     background-color: transparent !important;
 }
+
+.reel {
+    width: 100%;
+}
+
 .video-responsive{
     text-align: center;
     overflow:hidden;
